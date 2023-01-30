@@ -18,7 +18,7 @@ jobs:
     - name: download workflow artifact
       uses: benday-inc/download-latest-artifact@main
       with:
-        token: ${{ secrets.TOKEN_WITH_PERMISSIONS }}'
+        token: '${{ secrets.TOKEN_WITH_PERMISSIONS }}'
         repository_owner: 'coolblueraju'
         repository_name: 'DotNet6WithGithubActions'
         workflow_name: '.NET'
