@@ -22,7 +22,7 @@ jobs:
         repository_owner: 'coolblueraju'
         repository_name: 'DotNet6WithGithubActions'
         workflow_name: '.NET'
-        branch_name: 'master'
+        branch_name: 'main'
         artifact_name: 'Application_Artifact'
         download_path: '${{ github.workspace }}/temp'
         download_filename: 'actionsdemo-artifact.zip'        
