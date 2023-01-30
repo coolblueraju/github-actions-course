@@ -24,10 +24,10 @@ jobs:
         workflow_name: '.NET'
         branch_name: 'master'
         artifact_name: 'Application_Artifact'
-        download_path: '${{ github.workspace }}'
+        download_path: '${{ github.workspace }}/temp'
         download_filename: 'actionsdemo-artifact.zip'        
     - name: check files
-      run: ls -ltr
+      run: ls -ltr '${{ github.workspace }}/temp'
       
 
     
