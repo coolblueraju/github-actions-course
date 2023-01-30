@@ -1,0 +1,33 @@
+name: Download
+
+on:
+
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: check files
+      run: ls -ltr
+    - name: download workflow artifact
+      uses: benday-inc/download-latest-artifact@main
+      with:
+        token: ${{ secrets.TOKEN_WITH_PERMISSIONS }}'
+        repository_owner: 'coolblueraju'
+        repository_name: 'DotNet6WithGithubActions'
+        workflow_name: '.NET'
+        branch_name: 'master'
+        artifact_name: 'Application_Artifact'
+        download_path: '${{ github.workspace }}'
+        download_filename: 'actionsdemo-artifact.zip'        
+    - name: check files
+      run: ls -ltr
+      
+
+    
