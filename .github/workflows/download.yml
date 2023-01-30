@@ -27,7 +27,7 @@ jobs:
         download_path: '${{ github.workspace }}/temp'
         download_filename: 'actionsdemo-artifact.zip'        
     - name: check files
-      run: ls -ltr '${{ github.workspace }}/temp'
+      run: unzip -l '${{ github.workspace }}/temp/actionsdemo-artifact.zip'
       
 
     
